@@ -1,0 +1,34 @@
+.crausal_wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: all 0.2s;
+}
+
+.crausal_wrapper .crausal_container,
+.crausal_wrapper .empty_crausal {
+  width: 100%;
+  height: 30rem;
+}
+
+.crausal_wrapper .image {
+  width: 100%;
+  height: 100%;
+}
+
+.crausal_wrapper .empty_crausal {
+  background-color: grey;
+}
+
+@media (max-width: 768px) {
+  .crausal_wrapper .crausal_container,
+  .crausal_wrapper .empty_crausal {
+    height: 20rem;
+  }
+}
+@media (max-width: 480px) {
+  .crausal_wrapper .crausal_container,
+  .crausal_wrapper .empty_crausal {
+    height: 12rem;
+  }
+}
