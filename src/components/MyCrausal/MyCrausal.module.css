@@ -18,6 +18,7 @@
 
 .crausal_wrapper .empty_crausal {
   background-color: grey;
+  min-height: 30rem;
 }
 
 @media (max-width: 768px) {
