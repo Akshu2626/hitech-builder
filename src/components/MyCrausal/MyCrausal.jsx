@@ -14,14 +14,9 @@ const MyCrausal = ({ crausalData = [] }) => {
     const handleResize = () => {
       setIsNavigationEnabled(window.innerWidth >= 768);
     };
-
-    // Initialize on mount
     handleResize();
-
-    // Listen for resize events
     window.addEventListener("resize", handleResize);
 
-    // Cleanup the listener on unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
