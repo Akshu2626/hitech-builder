@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import styles from "./MyCrausal.module.css";
 
 // Sample data
-const MyCrausal = ({ crausalData }) => {
+const MyCrausal = ({ crausalData = [] }) => {
   const [isNavigationEnabled, setIsNavigationEnabled] = useState(true);
 
   useEffect(() => {
@@ -25,26 +25,25 @@ const MyCrausal = ({ crausalData }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return (
+  return crausalData.length > 0 ? (
     <div className={styles.crausal_wrapper}>
-      {crausalData.length > 0 ? (
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          navigation={isNavigationEnabled}
-          loop={true}
-          className={styles.crausal_container}
-        >
-          {crausalData.map((item) => (
-            <SwiperSlide key={item.id}>
-              <img src={item.image} alt={item.title} className={styles.image} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      ) : (
-        <div className={styles.empty_crausal}></div>
-      )}
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        navigation={isNavigationEnabled}
+        pagination={{ clickable: true }}
+        loop={true}
+        className={styles.crausal_container}
+      >
+        {crausalData.map((item) => (
+          <SwiperSlide key={item.id}>
+            <img src={item.image} alt={item.title} className={styles.image} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
+  ) : (
+    <div className={styles.empty_crausal}>No Crausal available</div>
   );
 };
 
