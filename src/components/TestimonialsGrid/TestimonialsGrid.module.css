@@ -1,0 +1,77 @@
+@media (min-width: 1440px) {
+  .ClientStoriesTilesBlockWrapper {
+    max-width: 130.4rem;
+    padding: 12rem 15px 0;
+  }
+}
+
+.ClientStoriesTilesBlockWrapper {
+  margin: auto;
+  max-width: calc(1440px + 15px * 2);
+  padding: 6rem 0px 0;
+  width: 100%;
+}
+
+.ClientStoriesTilesBlockWrapper .ContentWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .ClientStoriesTilesBlockWrapper .ContentWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .column:nth-child(1),
+  .column:nth-child(2),
+  .column:nth-child(3) {
+    min-width: 100%;
+  }
+
+  .EmptytestimonialGrid {
+    min-height: 20rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .ClientStoriesTilesBlockWrapper .ContentWrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .EmptytestimonialGrid {
+    min-height: 10rem;
+  }
+}
+
+.column:nth-child(3) {
+  min-width: 400px;
+}
+
+.column:nth-child(2) {
+  flex-shrink: 2;
+}
+
+.column:nth-child(1),
+.column:nth-child(2) {
+  min-width: 250px;
+}
+
+.testimonaials_button_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadMoreBtn {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: rgb(245, 135, 95);
+}
+
+.EmptytestimonialGrid {
+  width: 100%;
+  min-height: 30rem;
+  background-color: gray;
+}

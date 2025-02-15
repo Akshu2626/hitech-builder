@@ -1,0 +1,126 @@
+.ClientStoriesTilesBlockWrapper .TileBlockWrapper {
+  margin-bottom: 2rem;
+}
+
+.ClientStoriesTilesBlockWrapper .TileBlockWrapper {
+  position: relative;
+}
+
+.TileBlockWrapper .RowWrapper {
+  margin-right: 2rem;
+}
+
+@media (min-width: 1440px) {
+  .RowWrapper {
+    width: 337px;
+  }
+}
+
+@media (min-width: 768px) {
+  .ClientStoriesTilesBlockWrapper
+    .ContentWrapper
+    .RowWrapper:not(:last-of-type) {
+    margin-right: 2rem;
+  }
+}
+
+.TileBlockWrapper .ShareWrapper {
+  width: 100%;
+  height: max-content;
+}
+
+.TileBlockWrapper .ClientStoriesTile,
+.TileBlockWrapper .ClientStoriesTilehighlight {
+  background-color: #fff;
+  border: 0.1rem solid #d7d7d7;
+  height: auto;
+  padding: 36px 24px 52px;
+}
+
+.TileBlockWrapper .ClientStoriesTilehighlight {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.TileBlockWrapper .highlightedBtn {
+  color: var(--primary);
+  background-color: var(--white);
+  width: 88px;
+  height: 25px;
+  font-size: 16px;
+  margin-bottom: 14px;
+  border-radius: var(--border-radius-default);
+}
+
+.TileBlockWrapper .highlightedBtn p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.8rem;
+  font-weight: 700;
+}
+
+.TileBlockWrapper .Title {
+  font-size: 24px;
+  font-weight: 400;
+  height: auto;
+  letter-spacing: 0;
+  line-height: 29px;
+  margin-bottom: 31px;
+  max-width: 329px;
+}
+
+.TileBlockWrapper .Rating {
+  display: flex;
+  flex-direction: row;
+  height: 1.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.TileBlockWrapper .FullStar {
+  height: 16px;
+  width: 16px;
+  margin-right: 0.8rem;
+}
+
+.TileBlockWrapper .HalfStar {
+  height: 16px;
+  width: 16px;
+  margin-right: 1.8rem;
+}
+
+.TileBlockWrapper .Content {
+  font-size: 14px;
+  height: auto;
+  letter-spacing: 0;
+  line-height: 25px;
+  max-width: 35.5rem;
+}
+
+.TileBlockWrapper .Author {
+  font-size: 19px;
+  height: auto;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin: 4rem 0 0;
+  width: 100%;
+}
+
+.TileBlockWrapper .RowSocial {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0 0 1.5rem;
+  width: 100%;
+}
+
+.TileBlockWrapper .SocialIcon {
+  cursor: pointer;
+  height: 2.1rem;
+  margin: -3.6rem 2rem;
+  width: 2.1rem;
+}
+
+.TileBlockWrapper .SocialIcon {
+  height: 20px;
+}
